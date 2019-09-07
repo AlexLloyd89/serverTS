@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLloyd89/serverTS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexLloyd89/serverTS/issues"
+  },
+  "homepage": "https://github.com/AlexLloyd89/serverTS#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2"
+  }
+}
