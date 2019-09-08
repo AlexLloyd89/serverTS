@@ -7,10 +7,13 @@ var express_1 = __importDefault(require("express"));
 var body_parser_1 = __importDefault(require("body-parser"));
 var cookie_session_1 = __importDefault(require("cookie-session"));
 var loginRoutes_1 = require("./routes/loginRoutes");
+require("./controllers/LoginController");
+var appRouter_1 = require("./appRouter");
 var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use(cookie_session_1.default({ keys: ["tuperidf"] }));
 app.use(loginRoutes_1.router);
+app.use(appRouter_1.AppRouter.getInstance());
 app.listen(3000, function () {
     console.log("listening on port 3K");
 });
